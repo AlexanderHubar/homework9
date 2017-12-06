@@ -282,6 +282,10 @@ section {
 }
 .social a:hover li {
   border-color: #e84545;
+  background-color: #e84545;
+}
+.social a:hover li i {
+  color: #ffffff;
 }
 
 .card {
@@ -326,17 +330,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-}
-
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Open Sans", sans-serif;
-  color: #647a92;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-  overflow-x: hidden;
 }
 
 a {
@@ -637,10 +630,6 @@ a {
     height: 200px;
   }
 
-  .feedback-slider-nav-dot {
-    height: 3px;
-  }
-
   .icon {
     margin-right: 0px;
   }
@@ -838,7 +827,14 @@ a {
   color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .navbar-toggler {
+    margin-right: 15px;
+  }
   .navbar-nav {
     justify-content: center;
     height: 100vh;
@@ -847,5 +843,62 @@ a {
     margin-left: 0;
     margin-bottom: 2em;
     text-align: center;
+  }
+
+  .jumbotron {
+    padding: 0 25px;
+  }
+  .jumbotron h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .jumbotron p {
+    font: 400 16px/30px 'Raleway';
+  }
+
+  .features .list-item {
+    margin-bottom: 50px;
+  }
+  .features .list-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .gallery .list li, .gallery .team-list li, .gallery .social li {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .team-list {
+    justify-content: center;
+  }
+  .team-list li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .clients .feedback-slider-nav-wrapper {
+    display: flex;
+  }
+  .clients .slide-content-wrapper {
+    display: flex;
+    position: inherit;
+    padding-top: 0;
+  }
+  .clients .feedback-text {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  .download-section h3 {
+    text-align: center;
+  }
+
+  .top-footer {
+    padding-bottom: 60px;
+  }
+  .top-footer .list li, .top-footer .team-list li, .top-footer .social li {
+    margin-bottom: 50px;
+  }
+  .top-footer .list li:last-child, .top-footer .team-list li:last-child, .top-footer .social li:last-child {
+    margin-bottom: 0;
   }
 }

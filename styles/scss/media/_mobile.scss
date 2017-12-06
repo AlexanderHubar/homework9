@@ -1,0 +1,85 @@
+@media screen and (max-width: 425px) {
+  section {
+    padding: 60px 0;
+  }
+  .navbar {
+    &-toggler {
+      margin-right: 15px;
+    }
+    &-nav {
+      justify-content: center;
+      height: 100vh;
+    }
+    .navbar-collapse {
+      .nav-item {
+        margin-left: 0;
+        margin-bottom: 2em;
+        text-align: center;
+      }
+    }
+  }
+  .jumbotron {
+    padding: 0 25px;
+    h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+     p {
+      font: 400 16px/30px 'Raleway';
+    }
+  }
+  .features {
+    .list-item {
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .gallery {
+    .list {
+      li {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+  .team {
+    &-list {
+      justify-content: center;
+      li:not(:last-child){
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .clients {
+    .feedback-slider-nav-wrapper {
+      display: flex;
+    }
+    .slide-content-wrapper {
+      display: flex;
+      position: inherit;
+      padding-top: 0;
+    }
+    .feedback-text {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+  .download-section {
+    h3 {
+      text-align: center;
+    }
+  }
+  .top-footer {
+    padding-bottom: 60px;
+    .list {
+      li {
+        margin-bottom: 50px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
