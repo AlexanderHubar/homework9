@@ -906,7 +906,7 @@ a {
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .navbar-toggler {
     margin-right: 15px;
   }
@@ -957,19 +957,7 @@ a {
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 1024px) {
-  .jumbotron {
-    padding: 0 30px;
-  }
-  .jumbotron h1 {
-    font-size: 50px;
-  }
-
-  .features .list-item {
-    width: 360px;
-    padding: 0 30px;
-  }
-
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
   .gallery .list li, .gallery .team-list li, .gallery .social li {
     width: calc((100% / 2) - 1px);
     margin-left: 0;
