@@ -101,8 +101,12 @@ body {
 .navbar-brand {
   margin-left: 15px;
 }
+.navbar .navbar-collapse a:focus {
+  color: #fff !important;
+  opacity: .75;
+}
 .navbar .navbar-collapse a.active {
-  color: #e84545;
+  color: #e84545 !important;
 }
 .navbar .navbar-collapse a.nav-link {
   color: #fff;
@@ -694,13 +698,13 @@ a {
   padding: 0;
 }
 
-.gallery {
+.works {
   padding: 0;
 }
-.gallery .list, .gallery .team-list, .gallery .social {
+.works .list, .works .team-list, .works .social {
   justify-content: flex-start;
 }
-.gallery .list .description, .gallery .team-list .description, .gallery .social .description {
+.works .list .description, .works .team-list .description, .works .social .description {
   display: none;
   top: 0;
   left: 0;
@@ -712,16 +716,16 @@ a {
   align-items: center;
   position: absolute;
 }
-.gallery .list .description p, .gallery .team-list .description p, .gallery .social .description p {
+.works .list .description p, .works .team-list .description p, .works .social .description p {
   color: #ffffff;
 }
-.gallery .list .description h3, .gallery .team-list .description h3, .gallery .social .description h3 {
+.works .list .description h3, .works .team-list .description h3, .works .social .description h3 {
   font: bold 14px 'Raleway';
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 10px;
 }
-.gallery .list li, .gallery .team-list li, .gallery .social li {
+.works .list li, .works .team-list li, .works .social li {
   -webkit-transition: all 1s ease-in-out;
   position: relative;
   width: calc((100% / 4) - 1px);
@@ -730,26 +734,26 @@ a {
   margin-bottom: 1px;
   box-sizing: border-box;
 }
-.gallery .list li:first-child, .gallery .team-list li:first-child, .gallery .social li:first-child {
+.works .list li:first-child, .works .team-list li:first-child, .works .social li:first-child {
   margin-left: 0;
 }
-.gallery .list li:nth-child(5n), .gallery .team-list li:nth-child(5n), .gallery .social li:nth-child(5n) {
+.works .list li:nth-child(5n), .works .team-list li:nth-child(5n), .works .social li:nth-child(5n) {
   margin-left: 0;
 }
-.gallery .list li img, .gallery .team-list li img, .gallery .social li img {
+.works .list li img, .works .team-list li img, .works .social li img {
   width: 100%;
   height: 100%;
 }
-.gallery .list li:hover, .gallery .team-list li:hover, .gallery .social li:hover {
+.works .list li:hover, .works .team-list li:hover, .works .social li:hover {
   cursor: pointer;
   overflow: hidden;
 }
-.gallery .list li:hover .description, .gallery .team-list li:hover .description, .gallery .social li:hover .description {
+.works .list li:hover .description, .works .team-list li:hover .description, .works .social li:hover .description {
   -webkit-transition: all 1s ease-in-out;
   display: flex;
   background-color: rgba(232, 69, 69, 0.9);
 }
-.gallery .list li:hover img, .gallery .team-list li:hover img, .gallery .social li:hover img {
+.works .list li:hover img, .works .team-list li:hover img, .works .social li:hover img {
   -webkit-transition: all 1s ease-in-out;
   transform: rotate(20deg) scale(1.45) skew(1deg) translate(0px);
 }

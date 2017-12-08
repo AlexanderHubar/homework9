@@ -1,34 +1,18 @@
 $(document).ready(function () {
-
+    $(document).on("scroll", onScroll);
     var targetPos = $('#top-nav').offset().top;
     $(window).scroll(function () {
-       var scrollPos = $(this).scrollTop();
-       if (scrollPos > targetPos) {
-           $('#header').addClass('fixed-nav');
-           $('.welcome-section').css('padding-top','70px');
-       } else {
-           $('#header').removeClass('fixed-nav');
-           $('.welcome-section').css('padding-top','0');
-       }
+        var scrollPos = $(this).scrollTop();
+        if (scrollPos > targetPos) {
+            $('#header').addClass('fixed-nav');
+            $('.welcome-section').css('padding-top','70px');
+        } else {
+            $('#header').removeClass('fixed-nav');
+            $('.welcome-section').css('padding-top','0');
+        }
 
-        $('section[id]').each(function () {
-            var id = $(this).attr('id');
-            if ($(this).offset().top-70 < $(window).scrollTop()){
-                $('.navbar .nav-link a[href='+id+']').addClass('active').siblings().removeClass('active');
-            }
-        });
 
     });
-
-    var headerHeight = 70;
-    $('.nav-link').click(function (e) {
-        e.preventDefault();
-        var linkHref = $(this).attr('href');
-        $('html, body').animate({
-            'scrollTop': $(linkHref).offset().top - headerHeight
-        }, 1000);
-    });
-
     $('.magnific').magnificPopup({
         type: 'image',
         gallery: {
@@ -38,3 +22,18 @@ $(document).ready(function () {
         mainClass: 'mfp-fade'
     });
 });
+
+function onScroll(){
+    var scrollPos = $(document).scrollTop();
+    $('.navbar-nav .nav-item a.nav-link').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.navbar-nav .nav-item a.nav-link').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}

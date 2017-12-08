@@ -9,8 +9,12 @@
   }
 
   .navbar-collapse {
+    a:focus {
+      color: #fff !important;
+      opacity: .75;
+    }
     a.active {
-      color: $brand-color;
+      color: $brand-color !important;
     }
     a.nav-link {
       color: #fff;
