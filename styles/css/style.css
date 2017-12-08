@@ -92,12 +92,17 @@ body {
   }
 }
 .navbar {
+  max-width: 1170px;
+  margin: 0 auto;
   min-height: 100px;
   padding: 0;
   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.15);
 }
 .navbar-brand {
   margin-left: 15px;
+}
+.navbar .navbar-collapse a.active {
+  color: #e84545;
 }
 .navbar .navbar-collapse a.nav-link {
   color: #fff;
@@ -771,6 +776,26 @@ a {
 
 .clients {
   padding: 0;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#header.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  background-color: #2a2e48;
+}
+#header.fixed-nav .navbar {
+  box-shadow: none;
+  min-height: 70px;
+}
+#header.fixed-nav h1 {
+  margin-top: 100px;
 }
 
 .top-footer {
