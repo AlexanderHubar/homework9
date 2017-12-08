@@ -1,0 +1,21 @@
+.card {
+  width: 100%;
+  border: 0;
+  img, p {
+    margin-bottom: 30px;
+  }
+  header {
+    h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: $features-title;
+    }
+    span {
+      display: block;
+      margin-bottom: 25px;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: $brand-color;
+    }
+  }
+}

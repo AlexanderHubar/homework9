@@ -1,0 +1,19 @@
+.download-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font: 300 28px 'Raleway';
+    color: $features-title;
+    margin-bottom: 15px;
+  }
+  span {
+    display: block;
+    font: 600 13px 'Raleway';
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .btn {
+    padding: 0 80px;
+  }
+}
